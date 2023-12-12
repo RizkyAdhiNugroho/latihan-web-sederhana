@@ -1,0 +1,409 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document Title</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    color:white
+}
+ 
+header {
+   display: inline;
+}
+
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Quicksand',sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    text-align: justify;
+    padding: 10px;
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 80px;
+    position: sticky;
+    position: -webkit-sticky; 
+    top: 0;
+    background: black ;
+    z-index: 1;
+}
+
+.wrapper {
+    width: 1100px;
+    margin: auto;
+    position: relative;
+}
+
+.logo a {
+    font-size: 50px;
+    font-weight: 800;
+    float: left;
+    font-family: 'Quicksand',sans-serif;
+    color:white;
+}
+
+.menu {
+    float: right;
+}
+
+.tombol-menu {
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.tombol-menu .garis {
+    height: 3px;
+    background-color: #3f72af;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+
+}
+a.tbl-abu {
+    background: grey;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px 15px 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a.tbl-abu:hover {
+    background: rgb(57, 57, 207);
+    text-decoration: none;
+}
+ 
+main {
+    padding: 20px;
+    overflow: auto;
+}
+ 
+#content {
+    float: left;
+    width: 75%;
+}
+ 
+.container {
+    display: flex;
+    /* Properti lainnya */
+    width: 75%;
+    background-color:none;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.box {
+    flex-grow: 1;
+    /* properti lainnya */
+    background-color: none;
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px 0 black;
+    object-position: center;
+}
+
+.card {
+    box-shadow: 0 10px 10px 0 black;;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.featured-image{
+    width: 100%;
+    max-height: 1500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.kls{
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    padding: 10px;
+}
+ 
+h3 {
+    color:white;
+    padding: 10px;
+}
+ 
+.profile header {
+    text-align: center;
+} 
+ 
+.profile img {
+    width: 200px;
+}
+
+figcaption{
+    text-align: center;
+}
+
+
+.imgbox {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-weight: bold;
+}
+ 
+.foot{
+    text-align: center;
+}
+
+
+@media screen and (max-width: 800px) {
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+
+    .container{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;;
+        padding: 0; 
+    }
+    .wrapper {
+        width: 90%;
+    }
+
+    .logo a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    nav .menu ul {
+        text-align: center;
+        margin: auto;
+        line-height: 60px;
+    }
+
+    nav .menu ul li {
+        display: inline-block;
+        float: none;
+    }
+
+    section {
+        display: block;
+    }
+
+    section img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .kartu-tutor {
+        width: 50%;
+    }
+
+    .kartu-partner {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .logo a {
+        display: inline;
+    }
+    .tombol-menu {
+        display: flex;
+    }
+    nav .menu {
+        display: none;
+    }
+    nav .menu.active {
+        display: flex;
+    }
+    nav ul li {
+        width:100%;
+        border-bottom:1px solid #333333;
+    }
+}
+        </style>
+        <script src="assets\script.js" defer></script>
+    </head>
+    <body background="assets\image\bg.jpg">
+        <header>
+            <nav>
+                <div class="wrapper">
+                    <div class="logo"><a>Wizard world</a></div>
+                    <a href="#" class="tombol-menu">
+                        <span class="garis"></span>
+                        <span class="garis"></span>
+                        <span class="garis"></span>
+                    </a>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#pengenalan">Pengenalan</a></li>
+                    <li><a href="#fasilitas">Fasilitas</a></li>
+                    <li><a href="#kelas">Kelas</a></li>
+                            <li><a href="" class="tbl-abu">Daftar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div >
+                <article id="pengenalan">
+                    <div class="container">
+                        <div class="box">
+                            <img src="assets\image\hogwartss.png" alt="sejarah">
+                        </div>
+                        <div class="box">
+                            <h2>Pengenalan</h2>
+                            <p>Hogwarts adalah salah satu sekolah sihir terbaik dunia yang berada di Inggris. 
+                                Sekolah ini berfungsi melatih anak-anak yang berumur mulai 11 hingga 18 tahun yang memiliki 
+                                kemampuan sihir untuk menjadi para penyihir yang berkualitas.</p>
+                            </div>
+                        </div>                        
+                    </div>
+                </article>
+            </div>
+            <div id="content">
+                <article id="fasilitas" class="card">
+                    <h2>fasilitas</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eos nulla quam fugit perferendis, fugiat saepe quaerat obcaecati nesciunt beatae, ad, iure dignissimos? Eligendi quos, a totam, inventore tempore nesciunt porro quia laudantium architecto odio esse labore excepturi repellat? Provident esse nemo officiis cupiditate neque repellendus, accusantium, sapiente, ducimus vero eaque sit et corporis illum fugiat dicta at tenetur expedita.
+                    <section>
+                        <h3>kebun binatang sihir</h3>
+                        <img src="assets\image\Buckpot.jpeg" class="featured-image" alt="farm house">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel sint totam hic velit pariatur iure! Provident repellat exercitationem impedit nostrum inventore quas perspiciatis, sapiente excepturi molestias dolor laboriosam velit asperiores deleniti nobis sequi eius. Est dignissimos magni culpa iusto neque ipsum modi veritatis, aut enim, nulla autem? Accusantium, modi. Recusandae error nisi quas, dignissimos quaerat totam, quo debitis nam magnam, sint aspernatur dicta nulla cum repellat voluptas! Ratione nisi debitis ab perspiciatis voluptates iste, numquam facere cupiditate, corrupti dolorum inventore itaque commodi recusandae? Excepturi rerum praesentium maiores corrupti minima. Praesentium iusto perferendis tempore, cupiditate perspiciatis porro laborum fugit sapiente minima inventore a eaque error optio nemo ipsum illo, quibusdam odit doloribus! Veritatis praesentium deserunt facere minima magnam, quaerat ut dicta asperiores eos qui esse maiores adipisci exercitationem illum. Est, facilis?</p>
+                    </section>
+                    <section>
+                        <h3>Laboratorium sihir</h3>
+                        <img src="assets\image\classpot.jpg" class="featured-image" alt="bosscha">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab minima error in eum earum voluptatem commodi, reprehenderit mollitia amet ut doloribus sequi quo voluptatum dolor corrupti nemo nobis libero nesciunt necessitatibus delectus enim cupiditate, et rem? Amet vitae aut illum molestias a doloribus dolores temporibus ea voluptatum aperiam nisi sint doloremque expedita repudiandae praesentium ipsam totam, dolore, nam est, quod debitis incidunt numquam? Natus nihil, iure ex consequuntur id sapiente?</p>
+                    </section>
+                    <section>
+                        <h3>Laboratorium ramuan</h3>
+                        <img src="assets\image\potlab.jpg" class="featured-image" alt="bosscha">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad temporibus non molestiae sequi nisi, omnis pariatur ipsum tenetur nostrum natus fugit! Sed repellat dignissimos voluptates quos modi quas, provident delectus! Consequatur iure ab reiciendis repellat, praesentium necessitatibus quae perspiciatis, tempora nesciunt ducimus ipsa. Itaque rem aut aliquid eveniet explicabo possimus asperiores ducimus culpa quaerat? Consequatur cumque quod ipsam repellat consectetur earum nobis atque eaque aperiam nostrum at tempora delectus fugit quisquam voluptas obcaecati aliquam ad consequuntur commodi vel nisi debitis, rem necessitatibus! Est voluptates autem laboriosam maxime error quo, praesentium labore sed quas. Facilis, sint velit similique odit recusandae ut?</p>
+                    </section>
+                </article>
+                <div>
+                    <article>
+                        <div class="container" id="content">
+                            <h2 id="kelas">Daftar Asrama</h2>
+                            <div class="box">
+                                <img src="assets\image\gryffindor.png" class="imgbox" alt="gryffindor">
+                            <figcaption>gryffindor</figcaption>
+                            </div>
+                            <div class="box">
+                                <img src="assets\image\ravenclaw.png" class="imgbox" alt="ravenclaw"h>
+                                <figcaption>ravenclaw</figcaption>
+                            </div>
+                            <div class="box">
+                                <img src="assets\image\slytherin.png" class="imgbox" alt="slytherin">
+                                <figcaption>slytherin</figcaption>
+                            </div>
+                            <div class="box">
+                                <img src="assets\image\hufflepuff.png" class="imgbox" alt="hufflepuff">
+                                <figcaption>hufflepuff</figcaption>
+                            </div>                     
+                        </div>
+                </div>
+                </article>
+            </div>
+            <aside>
+                <article class="profile card">
+                    <header>
+                        <h2 class="kls">Alumni</h2>
+                        <figure>
+                            <img src="assets/image/no bg.png" alt="alumni">
+                            <figcaption>Alumni angkatan 7</figcaption>
+                        </figure>
+                    </header>
+                    <section>
+                            <h3 class="kls">Biodata</h3>
+                            <table >
+                                <tr>
+                                    <th>Nama</th>
+                                    <td>Rizky adhi n</td>
+                               <tr>
+                                  <th>Asal</th>
+                                  <td>Indonesia</td>
+                               </tr>
+                               <tr>
+                                  <th>tanggal lahir</th>
+                                  <td>6 bulan 2001</td>
+                               </tr>
+                               <tr>
+                                  <th>keahlian</th>
+                                  <td>potion</td>
+                               </tr>
+                               </tr>
+                                  <tr>
+                                  <th>email</th>
+                                  <td >nugrohorizkyadhi <br>@gmail.com</td>
+                               </tr>
+                           </table>                          
+                    </section>
+                </article>
+            </aside>    
+        </main>
+        <footer>
+            <p class="foot">Submission Belajar Dasar Pemrograman Web &#169; 2021, hogwarts cabang indo </p>
+        </footer>
+    </body>
+</html>
